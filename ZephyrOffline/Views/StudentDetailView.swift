@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StudentDetailView: View {
 
-    @State var student: Student
+    @State var student: StudentEntity
     @StateObject var studentViewModel = StudentViewModel()
     @State var alertInfo: AlertInfo?
     @State var showAlert = false
@@ -27,7 +27,7 @@ struct StudentDetailView: View {
         VStack {
             Color.white
                 .frame(height: 0)
-            Text("\(student.names) \(student.surname)")
+            Text("\(student.safeName) \(student.safeSurname)")
                 .font(.title)
                 .bold()
         }
@@ -92,14 +92,14 @@ struct StudentDetailView: View {
                 Button {
                     showAlert.toggle()
                     self.alertInfo = AlertInfo(id: .deleteLearner, actionToPerform: {
-                        guard let primaryKey = student.primaryKey else {
-                            print("ERROR: Primary key is nil.")
-                            return
-                        }
+//                        guard let primaryKey = student.primaryKey else {
+//                            print("ERROR: Primary key is nil.")
+//                            return
+//                        }
                         
-                        Task {
-                            await studentViewModel.deleteStudent(studentPrimaryKey: primaryKey)
-                        }
+//                        Task {
+//                            await studentViewModel.deleteStudent(studentPrimaryKey: primaryKey)
+//                        }
                         presentationMode.wrappedValue.dismiss()
                     })
                     
@@ -118,13 +118,31 @@ struct StudentDetailView: View {
         .padding(.horizontal)
         .background(Color("Gray"))
         .sheet(isPresented: $isShowingSkillsPicker) {
-            MultiplePickerView(list: Student.skillsList, selection: $student.skills)
+            MultiplePickerView(
+                list: Student.skillsList,
+                selection: Binding<String>(
+                    get: { student.safeSkills },
+                    set: { student.safeSkills = $0 }
+                )
+            )
         }
         .sheet(isPresented: $isShowingSpecialNeedsPicker) {
-            MultiplePickerView(list: Student.specialNeedsList, selection: $student.specialNeeds)
+            MultiplePickerView(
+                list: Student.specialNeedsList,
+                selection: Binding<String>(
+                    get: { student.safeSpecialNeeds },
+                    set: { student.safeSpecialNeeds = $0 }
+                )
+            )
         }
         .sheet(isPresented: $isShowingLanguagesPicker) {
-            MultiplePickerView(list: Student.languages, selection: $student.language)
+            MultiplePickerView(
+                list: Student.languages,
+                selection: Binding<String>(
+                    get: { student.safeLanguage },
+                    set: { student.safeLanguage = $0 }
+                )
+            )
         }
         .customCancelButton(isPresented: $showAlert, isShow: $isEditable, alertInfo: $alertInfo)
         .toolbar {
@@ -134,9 +152,9 @@ struct StudentDetailView: View {
                         showAlert.toggle()
                         self.alertInfo = AlertInfo(id: .editLearner, actionToPerform: {
                             student = studentViewModel.studentInputHandling(student)
-                            Task {
-                                await studentViewModel.editStudent(student)
-                            }
+//                            Task {
+//                                await studentViewModel.editStudent(student)
+//                            }
                             isEditable.toggle()
 //                            presentationMode.wrappedValue.dismiss()
                         })
@@ -144,11 +162,11 @@ struct StudentDetailView: View {
                         Text("Save")
                     }
                     .disabled(
-                        student.names.isEmpty ||
-                        student.surname.isEmpty ||
+                        student.safeName.isEmpty ||
+                        student.safeSurname.isEmpty ||
                         Calendar.current.isDate(
                             studentViewModel.dateFromString(
-                                student.dateOfBirth) ?? Date.now,
+                                student.safeDateOfBirth) ?? Date.now,
                             inSameDayAs: Date.now)
                     )
                 } else {
@@ -166,31 +184,31 @@ struct StudentDetailView: View {
     }
 }
 
-struct StudentDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack {
-            StudentDetailView(
-                student: Student(
-                    primaryKey: "",
-                    names: "Name",
-                    surname: "Surname",
-                    gender: "Not specified",
-                    dateOfBirth: "01/01/2000",
-                    nationality: "Italy",
-                    city: "City",
-                    address: "Address",
-                    identityNumber: "12345",
-                    language: "English",
-                    grade: "Grade",
-                    school: "School",
-                    programme: "Programme",
-                    referenceContact: "Reference",
-                    age: "1",
-                    province: "Province",
-                    skills: "Skill1, Skill2",
-                    specialNeeds: "Special needs"
-                )
-            )
-        }
-    }
-}
+//struct StudentDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationStack {
+//            StudentDetailView(
+//                student: Student(
+//                    primaryKey: "",
+//                    names: "Name",
+//                    surname: "Surname",
+//                    gender: "Not specified",
+//                    dateOfBirth: "01/01/2000",
+//                    nationality: "Italy",
+//                    city: "City",
+//                    address: "Address",
+//                    identityNumber: "12345",
+//                    language: "English",
+//                    grade: "Grade",
+//                    school: "School",
+//                    programme: "Programme",
+//                    referenceContact: "Reference",
+//                    age: "1",
+//                    province: "Province",
+//                    skills: "Skill1, Skill2",
+//                    specialNeeds: "Special needs"
+//                )
+//            )
+//        }
+//    }
+//}

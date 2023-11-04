@@ -109,24 +109,24 @@ class StudentViewModel: ObservableObject {
         return selection == defaultArray.first ? "-" : selection
     }
     
-    func studentInputHandling(_ student: Student) -> Student {
+    func studentInputHandling(_ student: StudentEntity) -> StudentEntity {
         var studentWithNoEmptyFields = student
         
-        studentWithNoEmptyFields.names = handleEmptyInput(studentWithNoEmptyFields.names)
-        studentWithNoEmptyFields.surname = handleEmptyInput(studentWithNoEmptyFields.surname)
-        studentWithNoEmptyFields.gender = handleEmptyPickerValue(studentWithNoEmptyFields.gender, Student.genderValues)
-        studentWithNoEmptyFields.nationality = handleEmptyPickerValue(studentWithNoEmptyFields.nationality, loadNations())
-        studentWithNoEmptyFields.city = handleEmptyInput(studentWithNoEmptyFields.city)
-        studentWithNoEmptyFields.address = handleEmptyInput(studentWithNoEmptyFields.address)
-        studentWithNoEmptyFields.language = handleEmptyInput(studentWithNoEmptyFields.language)
-        studentWithNoEmptyFields.identityNumber = handleEmptyInput(studentWithNoEmptyFields.identityNumber)
-        studentWithNoEmptyFields.grade = handleEmptyPickerValue(studentWithNoEmptyFields.grade, Student.grades)
-        studentWithNoEmptyFields.school = handleEmptyInput(studentWithNoEmptyFields.school)
-        studentWithNoEmptyFields.programme = handleEmptyPickerValue(studentWithNoEmptyFields.programme, Student.programmes)
-        studentWithNoEmptyFields.referenceContact = handleEmptyInput(studentWithNoEmptyFields.referenceContact)
-        studentWithNoEmptyFields.province = handleEmptyPickerValue(studentWithNoEmptyFields.province, Student.provinces)
-        studentWithNoEmptyFields.skills = handleEmptyInput(studentWithNoEmptyFields.skills)
-        studentWithNoEmptyFields.specialNeeds = handleEmptyInput(studentWithNoEmptyFields.specialNeeds)
+        studentWithNoEmptyFields.names = handleEmptyInput(studentWithNoEmptyFields.safeName)
+        studentWithNoEmptyFields.surname = handleEmptyInput(studentWithNoEmptyFields.safeSurname)
+        studentWithNoEmptyFields.gender = handleEmptyPickerValue(studentWithNoEmptyFields.safeGender, Student.genderValues)
+        studentWithNoEmptyFields.nationality = handleEmptyPickerValue(studentWithNoEmptyFields.safeNationality, loadNations())
+        studentWithNoEmptyFields.city = handleEmptyInput(studentWithNoEmptyFields.safeCity)
+        studentWithNoEmptyFields.address = handleEmptyInput(studentWithNoEmptyFields.safeAddress)
+        studentWithNoEmptyFields.language = handleEmptyInput(studentWithNoEmptyFields.safeLanguage)
+        studentWithNoEmptyFields.identityNumber = handleEmptyInput(studentWithNoEmptyFields.safeIdentityNumber)
+        studentWithNoEmptyFields.grade = handleEmptyPickerValue(studentWithNoEmptyFields.safeGrade, Student.grades)
+        studentWithNoEmptyFields.school = handleEmptyInput(studentWithNoEmptyFields.safeSchool)
+        studentWithNoEmptyFields.programme = handleEmptyPickerValue(studentWithNoEmptyFields.safeProgramme, Student.programmes)
+        studentWithNoEmptyFields.referenceContact = handleEmptyInput(studentWithNoEmptyFields.safeReferenceContact)
+        studentWithNoEmptyFields.province = handleEmptyPickerValue(studentWithNoEmptyFields.safeProvince, Student.provinces)
+        studentWithNoEmptyFields.skills = handleEmptyInput(studentWithNoEmptyFields.safeSkills)
+        studentWithNoEmptyFields.specialNeeds = handleEmptyInput(studentWithNoEmptyFields.safeSpecialNeeds)
         
         return studentWithNoEmptyFields
     }

@@ -9,31 +9,31 @@ import SwiftUI
 
 struct StudentListItemView: View {
 
-    var student: Student
+    var student: StudentEntity
 
     var body: some View {
         HStack {
             HStack {
                 Image(systemName: "person.fill")
-                Text("\(student.names) \(student.surname)")
+                Text("\(student.safeName) \(student.safeSurname)")
             }
             .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity, alignment: .leading)
             Divider().frame(height: 50).background(Color("Gray"))
             HStack {
                 Image(systemName: "graduationcap.fill")
-                Text("Grade \(student.grade)")
+                Text("Grade \(student.safeGrade)")
             }
             .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity, alignment: .leading)
             Divider().frame(height: 50).background(Color("Gray"))
             HStack {
                 Image(systemName: "text.book.closed.fill")
-                Text(student.programme)
+                Text(student.safeProgramme)
             }
             .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity, alignment: .leading)
             Divider().frame(height: 50).background(Color("Gray"))
             HStack {
                 Image(systemName: "mappin.and.ellipse")
-                Text(student.school)
+                Text(student.safeSchool)
                 Spacer()
                 Image(systemName: "chevron.right")
             }
@@ -47,27 +47,27 @@ struct StudentListItemView: View {
     }
 }
 
-#Preview {
-    StudentListItemView(
-        student: Student(
-            primaryKey: "",
-            names: "Hello",
-            surname: "Student",
-            gender: "",
-            dateOfBirth: "",
-            nationality: "",
-            city: "",
-            address: "",
-            identityNumber: "1",
-            language: "",
-            grade: "B",
-            school: "school name",
-            programme: "programm name",
-            referenceContact: "",
-            age: "",
-            province: "",
-            skills: "Skill1, Skill2",
-            specialNeeds: ""
-        )
-    )
-}
+//#Preview {
+//    StudentListItemView(
+//        student: Student(
+//            primaryKey: "",
+//            names: "Hello",
+//            surname: "Student",
+//            gender: "",
+//            dateOfBirth: "",
+//            nationality: "",
+//            city: "",
+//            address: "",
+//            identityNumber: "1",
+//            language: "",
+//            grade: "B",
+//            school: "school name",
+//            programme: "programm name",
+//            referenceContact: "",
+//            age: "",
+//            province: "",
+//            skills: "Skill1, Skill2",
+//            specialNeeds: ""
+//        )
+//    )
+//}

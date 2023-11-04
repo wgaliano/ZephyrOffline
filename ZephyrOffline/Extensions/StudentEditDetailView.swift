@@ -16,39 +16,57 @@ extension StudentDetailView {
             StudentDetailEditRowTextWithoutSymbolsView(
                 symbol: "person.fill",
                 title: "Name",
-                parameter: $student.names
+                parameter: Binding(
+                    get: { student.safeName },
+                    set: { student.safeName = $0 }
+                )
             )
             Divider()
             StudentDetailEditRowTextWithoutSymbolsView(
                 symbol: "person.fill",
                 title: "Surname",
-                parameter: $student.surname
+                parameter: Binding<String>(
+                    get: { student.safeSurname },
+                    set: { student.safeSurname = $0 }
+                )
             )
             Divider()
             StudentDetailEditRowPickView(
                 symbol: "person.fill",
                 title: "Gender",
                 array: Student.genderValues,
-                parameter: $student.gender
+                parameter: Binding<String>(
+                    get: { student.safeGender },
+                    set: { student.safeGender = $0 }
+                )
             )
             Divider()
             StudentDetailEditRowDateView(
                 symbol: "calendar",
                 title: "Date of birth",
-                parameter: $student.dateOfBirth
+                parameter: Binding<String>(
+                    get: { student.safeDateOfBirth },
+                    set: { student.safeDateOfBirth = $0 }
+                )
             )
             Divider()
             StudentDetailEditRowPickView(
                 symbol: "globe.europe.africa.fill",
                 title: "Nation of birth",
                 array: studentViewModel.loadNations(),
-                parameter: $student.nationality
+                parameter: Binding<String>(
+                    get: { student.safeNationality },
+                    set: { student.safeNationality = $0 }
+                )
             )
             Divider()
             StudentDetailEditRowIntView(
                 symbol: "menucard.fill",
                 title: "Identity number",
-                parameter: $student.identityNumber
+                parameter: Binding<String>(
+                    get: { student.safeIdentityNumber },
+                    set: { student.safeIdentityNumber = $0 }
+                )
             )
         }
         .mainRectangleExt()
@@ -60,7 +78,10 @@ extension StudentDetailView {
             StudentDetailEditRowTextWithSymbolsView(
                 symbol: "mappin.and.ellipse",
                 title: "School",
-                parameter: $student.school
+                parameter: Binding<String>(
+                    get: { student.safeSchool },
+                    set: { student.safeSchool = $0 }
+                )
             )
             Divider()
 
@@ -68,7 +89,10 @@ extension StudentDetailView {
                 symbol: "text.book.closed.fill",
                 title: "Programme",
                 array: Student.programmes,
-                parameter: $student.programme
+                parameter: Binding<String>(
+                    get: { student.safeProgramme },
+                    set: { student.safeProgramme = $0 }
+                )
             )
             Divider()
 
@@ -76,7 +100,10 @@ extension StudentDetailView {
                 symbol: "graduationcap.fill",
                 title: "Grade",
                 array: Student.grades,
-                parameter: $student.grade
+                parameter: Binding<String>(
+                    get: { student.safeGrade },
+                    set: { student.safeGrade = $0 }
+                )
             )
         }.mainRectangleExt()
     }
@@ -87,26 +114,38 @@ extension StudentDetailView {
             StudentDetailEditRowTextWithSymbolsView(
                 symbol: "map.fill",
                 title: "Province",
-                parameter: $student.province
+                parameter: Binding<String>(
+                    get: { student.safeProvince },
+                    set: { student.safeProvince = $0 }
+                )
             )
             Divider()
             StudentDetailEditRowTextWithSymbolsView(
                 symbol: "map.fill",
                 title: "City",
-                parameter: $student.city
+                parameter: Binding<String>(
+                    get: { student.safeCity },
+                    set: { student.safeCity = $0 }
+                )
             )
 
             Divider()
             StudentDetailEditRowTextWithSymbolsView(
                 symbol: "map.fill",
                 title: "Address",
-                parameter: $student.address
+                parameter: Binding<String>(
+                    get: { student.safeAddress },
+                    set: { student.safeAddress = $0 }
+                )
             )
             Divider()
             StudentDetailEditRowTextWithSymbolsView(
                 symbol: "person.circle.fill",
                 title: "Reference Contact",
-                parameter: $student.referenceContact
+                parameter: Binding<String>(
+                    get: { student.safeReferenceContact },
+                    set: { student.safeReferenceContact = $0 }
+                )
             )
         }
         .mainRectangleExt()
@@ -118,21 +157,30 @@ extension StudentDetailView {
             StudentDetailEditRowMultiPickView(
                 symbol: "text.bubble.fill",
                 title: "Languages",
-                parameter: $student.language,
+                parameter: Binding<String>(
+                    get: { student.safeLanguage },
+                    set: { student.safeLanguage = $0 }
+                ),
                 isShowingButton: $isShowingLanguagesPicker
             )
             Divider()
             StudentDetailEditRowMultiPickView(
                 symbol: "list.bullet",
                 title: "Skills",
-                parameter: $student.skills,
+                parameter: Binding<String>(
+                    get: { student.safeSkills },
+                    set: { student.safeSkills = $0 }
+                ),
                 isShowingButton: $isShowingSkillsPicker
             )
             Divider()
             StudentDetailEditRowMultiPickView(
                 symbol: "figure.2.arms.open",
                 title: "Special Needs",
-                parameter: $student.specialNeeds,
+                parameter: Binding<String>(
+                    get: { student.safeSpecialNeeds },
+                    set: { student.safeSpecialNeeds = $0 }
+                ),
                 isShowingButton: $isShowingSpecialNeedsPicker
             )
         }.mainRectangleExt()

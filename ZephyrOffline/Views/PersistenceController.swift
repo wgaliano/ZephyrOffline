@@ -128,3 +128,149 @@ class PersistenceController: ObservableObject {
         saveStudentsData()
     }
 }
+
+extension StudentEntity {
+    var safeName: String {
+        get {
+            return self.names ?? "-"
+        }
+        set {
+            self.names = newValue
+        }
+    }
+    
+    var safeSurname: String {
+        get {
+            return self.surname ?? "-"
+        }
+        set {
+            self.surname = newValue
+        }
+    }
+    
+    var safeGender: String {
+        get {
+            return self.gender ?? "-"
+        }
+        set {
+            self.gender = newValue
+        }
+    }
+    
+    var safeDateOfBirth: String {
+        get {
+            return self.dateOfBirth ?? "-"
+        }
+        set {
+            self.dateOfBirth = newValue
+        }
+    }
+    
+    var safeNationality: String {
+        get {
+            return self.nationality ?? "-"
+        }
+        set {
+            self.nationality = newValue
+        }
+    }
+    
+    var safeCity: String {
+        get {
+            return self.city ?? "-"
+        }
+        set {
+            self.city = newValue
+        }
+    }
+    
+    var safeAddress: String {
+        get {
+            return self.address ?? "-"
+        }
+        set {
+            self.address = newValue
+        }
+    }
+    
+    var safeLanguage: String {
+        get {
+            return self.language ?? "-"
+        }
+        set {
+            self.language = newValue
+        }
+    }
+    
+    var safeSpecialNeeds: String {
+        get {
+            return self.specialNeeds ?? "-"
+        }
+        set {
+            self.specialNeeds = newValue
+        }
+    }
+    
+    var safeIdentityNumber: String {
+        get {
+            return self.identityNumber ?? "-"
+        }
+        set {
+            self.identityNumber = newValue
+        }
+    }
+    
+    var safeGrade: String {
+        get {
+            return self.grade ?? "-"
+        }
+        set {
+            self.grade = newValue
+        }
+    }
+    
+    var safeSchool: String {
+        get {
+            return self.school ?? "-"
+        }
+        set {
+            self.school = newValue
+        }
+    }
+    
+    var safeProgramme: String {
+        get {
+            return self.programme ?? "-"
+        }
+        set {
+            self.programme = newValue
+        }
+    }
+    
+    var safeReferenceContact: String {
+        get {
+            return self.referenceContact ?? "-"
+        }
+        set {
+            self.referenceContact = newValue
+        }
+    }
+    
+    var safeProvince: String {
+        get {
+            return self.province ?? "-"
+        }
+        set {
+            self.province = newValue
+        }
+    }
+    
+    var safeSkills: String {
+        get {
+            return self.skills ?? "-"
+        }
+        set {
+            self.skills = newValue
+        }
+    }
+}

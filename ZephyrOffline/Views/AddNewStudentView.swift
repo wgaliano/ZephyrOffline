@@ -12,6 +12,7 @@ struct AddNewStudentView: View {
     let isTabToAddStudent: Bool
 
     @StateObject var studentViewModel = StudentViewModel()
+    @StateObject var controllerVM = PersistenceController()
     @Environment(\.presentationMode) var presentationMode
     @State var requiredFieldsFilled = true
     @State var isShowingSpecialNeedsPicker = false
@@ -99,31 +100,27 @@ struct AddNewStudentView: View {
                         requiredFieldsFilled = true
                         showAlert.toggle()
                         self.alertInfo = AlertInfo(id: .addLearner, actionToPerform: {
-                            var newStudent = Student(
-                                primaryKey: nil,
-                                names: names,
-                                surname: surname,
-                                gender: gender,
+                            
+                            controllerVM.addStudent(
+                                name: studentViewModel.handleEmptyInput(names),
+                                surname: studentViewModel.handleEmptyInput(surname),
+                                gender: studentViewModel.handleEmptyPickerValue(gender, Student.genderValues),
                                 dateOfBirth: studentViewModel.stringFromDate(dateOfBirth),
-                                nationality: nationality,
-                                city: city,
-                                address: address,
-                                identityNumber: identityNumber,
-                                language: language,
-                                grade: grade,
-                                school: school,
-                                programme: programme,
-                                referenceContact: referenceContact,
-                                age: nil,
-                                province: province,
-                                skills: skills,
-                                specialNeeds: specialNeeds
+                                nationality: studentViewModel.handleEmptyPickerValue(nationality, studentViewModel.loadNations()),
+                                city: studentViewModel.handleEmptyInput(city),
+                                address: studentViewModel.handleEmptyInput(address),
+                                language: studentViewModel.handleEmptyInput(language),
+                                specialNeeds: studentViewModel.handleEmptyInput(specialNeeds),
+                                identityNumber: studentViewModel.handleEmptyInput(identityNumber),
+                                grade: studentViewModel.handleEmptyPickerValue(grade, Student.grades),
+                                school: studentViewModel.handleEmptyInput(school),
+                                programme: studentViewModel.handleEmptyPickerValue(programme, Student.programmes),
+                                referenceContact: studentViewModel.handleEmptyInput(referenceContact),
+                                province: studentViewModel.handleEmptyPickerValue(province, Student.provinces),
+                                skills: studentViewModel.handleEmptyInput(skills)
                             )
 
-                            newStudent = studentViewModel.studentInputHandling(newStudent)
-                            Task {
-                                await studentViewModel.addNewStudent(newStudent: newStudent)
-                            }
+                            
                             presentationMode.wrappedValue.dismiss()
                         })
                     }

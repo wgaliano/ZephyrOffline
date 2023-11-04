@@ -13,6 +13,7 @@ struct ContentView: View {
     @State private var isListView = false
     @State private var isTabToAddStudent = false
     @StateObject private var studentViewModel = StudentViewModel()
+    @StateObject var controllerVM = PersistenceController()
     
     var body: some View {
         VStack {
@@ -29,10 +30,10 @@ struct ContentView: View {
                 
                 if isListView {
                     LazyVGrid(columns: [GridItem(.flexible(), spacing: 50), GridItem(.flexible(), spacing: 50)]) {
-                        ForEach(studentViewModel.students.sorted(by: { $0.names < $1.names }), id: \.self) { student in
+                        ForEach(controllerVM.students.sorted(by: { $0.safeName < $1.safeName }), id: \.self) { student in
                             if searchText.isEmpty ||
-                                student.names.localizedCaseInsensitiveContains(searchText) ||
-                                student.surname.localizedCaseInsensitiveContains(searchText) {
+                                student.safeName.localizedCaseInsensitiveContains(searchText) ||
+                                student.safeSurname.localizedCaseInsensitiveContains(searchText) {
                                 NavigationLink {
                                     StudentDetailView(student: student)
                                 } label: {
@@ -45,10 +46,10 @@ struct ContentView: View {
                     }
                     .padding(.all)
                 } else {
-                    ForEach(studentViewModel.students.sorted(by: { $0.names < $1.names }), id: \.self) { student in
+                    ForEach(controllerVM.students.sorted(by: { $0.safeName < $1.safeName }), id: \.self) { student in
                         if searchText.isEmpty ||
-                            student.names.localizedCaseInsensitiveContains(searchText) ||
-                            student.surname.localizedCaseInsensitiveContains(searchText) {
+                            student.safeName.localizedCaseInsensitiveContains(searchText) ||
+                            student.safeSurname.localizedCaseInsensitiveContains(searchText) {
                             NavigationLink {
                                 StudentDetailView(student: student)
                             } label: {
@@ -67,9 +68,7 @@ struct ContentView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
-                    Task {
-                        await studentViewModel.loadStudents()
-                    }
+                    controllerVM.fetchStudents()
                 } label: {
                     
                     Image(systemName: "arrow.clockwise")
@@ -110,9 +109,7 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            Task {
-                await studentViewModel.loadStudents()
-            }
+            controllerVM.fetchStudents()
         }
     }
     private func deleteStudent(at offsets: IndexSet ) {

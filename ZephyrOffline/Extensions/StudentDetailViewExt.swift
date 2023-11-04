@@ -16,31 +16,31 @@ extension StudentDetailView {
             StudentDetailRowView(
                 symbol: "person.fill",
                 title: "Name",
-                bodyInfo: "\(student.names) \(student.surname)"
+                bodyInfo: "\(student.safeName) \(student.safeSurname)"
             )
             Divider()
             StudentDetailRowView(
                 symbol: "person.fill",
                 title: "Gender",
-                bodyInfo: student.gender
+                bodyInfo: student.safeGender
             )
             Divider()
             StudentDetailRowView(
                 symbol: "calendar",
                 title: "Date of birth",
-                bodyInfo: student.dateOfBirth
+                bodyInfo: student.safeDateOfBirth
             )
             Divider()
             StudentDetailRowView(
                 symbol: "globe.europe.africa.fill",
                 title: "Nation of birth",
-                bodyInfo: student.nationality
+                bodyInfo: student.safeNationality
             )
             Divider()
             StudentDetailRowView(
                 symbol: "menucard.fill",
                 title: "Identity number",
-                bodyInfo: "\(student.identityNumber)"
+                bodyInfo: student.safeIdentityNumber
             )
         }
         .mainRectangleExt()
@@ -52,21 +52,21 @@ extension StudentDetailView {
             StudentDetailRowView(
                 symbol: "mappin.and.ellipse",
                 title: "School",
-                bodyInfo: student.school
+                bodyInfo: student.safeSchool
             )
             Divider()
 
             StudentDetailRowView(
                 symbol: "text.book.closed.fill",
                 title: "Programme",
-                bodyInfo: student.programme
+                bodyInfo: student.safeProgramme
             )
             Divider()
 
             StudentDetailRowView(
                 symbol: "graduationcap.fill",
                 title: "Grade",
-                bodyInfo: student.grade
+                bodyInfo: student.safeGrade
             )
         }.mainRectangleExt()
     }
@@ -78,9 +78,9 @@ extension StudentDetailView {
                 symbol: "map.fill",
                 title: "Address",
                 bodyInfo: studentViewModel.checkAddress(
-                    province: student.province,
-                    city: student.city,
-                    address: student.address
+                    province: student.safeProvince,
+                    city: student.safeCity,
+                    address: student.safeAddress
                 )
             )
             MapView()
@@ -89,7 +89,7 @@ extension StudentDetailView {
             StudentDetailRowView(
                 symbol: "person.circle.fill",
                 title: "Reference Contact",
-                bodyInfo: student.referenceContact
+                bodyInfo: student.safeReferenceContact
             )
         }
         .mainRectangleExt()
@@ -101,19 +101,19 @@ extension StudentDetailView {
             StudentDetailRowView(
                 symbol: "text.bubble.fill",
                 title: "Languages",
-                bodyInfo: student.language
+                bodyInfo: student.safeLanguage
             )
             Divider()
             StudentDetailRowView(
                 symbol: "list.bullet",
                 title: "Skills",
-                bodyInfo: student.skills
+                bodyInfo: student.safeSkills
             )
             Divider()
             StudentDetailRowView(
                 symbol: "figure.2.arms.open",
                 title: "Special Needs",
-                bodyInfo: student.specialNeeds
+                bodyInfo: student.safeSpecialNeeds
             )
         }.mainRectangleExt()
     }
