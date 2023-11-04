@@ -11,6 +11,30 @@
 		3C8E29A02AF65A3B006F4DEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E299F2AF65A3B006F4DEB /* ContentView.swift */; };
 		3C8E29A22AF65A3B006F4DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C8E29A12AF65A3B006F4DEB /* Assets.xcassets */; };
 		3C8E29A62AF65A3B006F4DEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C8E29A52AF65A3B006F4DEB /* Preview Assets.xcassets */; };
+		3C8E29B12AF66CB2006F4DEB /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29B02AF66CB2006F4DEB /* Student.swift */; };
+		3C8E29B32AF66CD3006F4DEB /* StudentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29B22AF66CD3006F4DEB /* StudentData.swift */; };
+		3C8E29B52AF66CEB006F4DEB /* AlertInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29B42AF66CEB006F4DEB /* AlertInfo.swift */; };
+		3C8E29B72AF66D16006F4DEB /* StudendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29B62AF66D16006F4DEB /* StudendViewModel.swift */; };
+		3C8E29B92AF66D45006F4DEB /* StudentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29B82AF66D45006F4DEB /* StudentDetailView.swift */; };
+		3C8E29BB2AF66D5D006F4DEB /* AddNewStudentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29BA2AF66D5D006F4DEB /* AddNewStudentView.swift */; };
+		3C8E29BD2AF66D7B006F4DEB /* CustomToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29BC2AF66D7B006F4DEB /* CustomToolbarView.swift */; };
+		3C8E29BF2AF66D8C006F4DEB /* MultiPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29BE2AF66D8C006F4DEB /* MultiPickerView.swift */; };
+		3C8E29C12AF66DA8006F4DEB /* StudentListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29C02AF66DA8006F4DEB /* StudentListItemView.swift */; };
+		3C8E29C32AF66DC0006F4DEB /* StudentDetailRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29C22AF66DC0006F4DEB /* StudentDetailRowView.swift */; };
+		3C8E29C52AF66DD5006F4DEB /* LearnerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29C42AF66DD5006F4DEB /* LearnerItemView.swift */; };
+		3C8E29C72AF66DE6006F4DEB /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29C62AF66DE6006F4DEB /* CustomTextField.swift */; };
+		3C8E29C92AF66DFE006F4DEB /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29C82AF66DFE006F4DEB /* MapView.swift */; };
+		3C8E29CB2AF66E2B006F4DEB /* StudentDetailViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29CA2AF66E2B006F4DEB /* StudentDetailViewExt.swift */; };
+		3C8E29CD2AF66E40006F4DEB /* StudentEditDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29CC2AF66E40006F4DEB /* StudentEditDetailView.swift */; };
+		3C8E29CF2AF66E55006F4DEB /* AddNewStudentViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29CE2AF66E55006F4DEB /* AddNewStudentViewExt.swift */; };
+		3C8E29D12AF66E7B006F4DEB /* MainRectangleExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29D02AF66E7B006F4DEB /* MainRectangleExt.swift */; };
+		3C8E29D32AF66E9B006F4DEB /* SmallerRectangleExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29D22AF66E9B006F4DEB /* SmallerRectangleExt.swift */; };
+		3C8E29D52AF66EB5006F4DEB /* TextField-NumericExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29D42AF66EB5006F4DEB /* TextField-NumericExt.swift */; };
+		3C8E29D72AF66ED1006F4DEB /* TextField-LettersExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29D62AF66ED1006F4DEB /* TextField-LettersExt.swift */; };
+		3C8E29D92AF66EE8006F4DEB /* BackCustomButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29D82AF66EE8006F4DEB /* BackCustomButtonExt.swift */; };
+		3C8E29DB2AF66EFC006F4DEB /* CustomCancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29DA2AF66EFC006F4DEB /* CustomCancelButton.swift */; };
+		3C8E29DD2AF66F1E006F4DEB /* nations.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3C8E29DC2AF66F1E006F4DEB /* nations.txt */; };
+		3C8E29DF2AF66F54006F4DEB /* FilemakerOData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29DE2AF66F54006F4DEB /* FilemakerOData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +44,30 @@
 		3C8E29A12AF65A3B006F4DEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C8E29A32AF65A3B006F4DEB /* ZephyrOffline.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZephyrOffline.entitlements; sourceTree = "<group>"; };
 		3C8E29A52AF65A3B006F4DEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3C8E29B02AF66CB2006F4DEB /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		3C8E29B22AF66CD3006F4DEB /* StudentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentData.swift; sourceTree = "<group>"; };
+		3C8E29B42AF66CEB006F4DEB /* AlertInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertInfo.swift; sourceTree = "<group>"; };
+		3C8E29B62AF66D16006F4DEB /* StudendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudendViewModel.swift; sourceTree = "<group>"; };
+		3C8E29B82AF66D45006F4DEB /* StudentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailView.swift; sourceTree = "<group>"; };
+		3C8E29BA2AF66D5D006F4DEB /* AddNewStudentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewStudentView.swift; sourceTree = "<group>"; };
+		3C8E29BC2AF66D7B006F4DEB /* CustomToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbarView.swift; sourceTree = "<group>"; };
+		3C8E29BE2AF66D8C006F4DEB /* MultiPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPickerView.swift; sourceTree = "<group>"; };
+		3C8E29C02AF66DA8006F4DEB /* StudentListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListItemView.swift; sourceTree = "<group>"; };
+		3C8E29C22AF66DC0006F4DEB /* StudentDetailRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailRowView.swift; sourceTree = "<group>"; };
+		3C8E29C42AF66DD5006F4DEB /* LearnerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnerItemView.swift; sourceTree = "<group>"; };
+		3C8E29C62AF66DE6006F4DEB /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		3C8E29C82AF66DFE006F4DEB /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		3C8E29CA2AF66E2B006F4DEB /* StudentDetailViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailViewExt.swift; sourceTree = "<group>"; };
+		3C8E29CC2AF66E40006F4DEB /* StudentEditDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentEditDetailView.swift; sourceTree = "<group>"; };
+		3C8E29CE2AF66E55006F4DEB /* AddNewStudentViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewStudentViewExt.swift; sourceTree = "<group>"; };
+		3C8E29D02AF66E7B006F4DEB /* MainRectangleExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRectangleExt.swift; sourceTree = "<group>"; };
+		3C8E29D22AF66E9B006F4DEB /* SmallerRectangleExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallerRectangleExt.swift; sourceTree = "<group>"; };
+		3C8E29D42AF66EB5006F4DEB /* TextField-NumericExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField-NumericExt.swift"; sourceTree = "<group>"; };
+		3C8E29D62AF66ED1006F4DEB /* TextField-LettersExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField-LettersExt.swift"; sourceTree = "<group>"; };
+		3C8E29D82AF66EE8006F4DEB /* BackCustomButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCustomButtonExt.swift; sourceTree = "<group>"; };
+		3C8E29DA2AF66EFC006F4DEB /* CustomCancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCancelButton.swift; sourceTree = "<group>"; };
+		3C8E29DC2AF66F1E006F4DEB /* nations.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nations.txt; sourceTree = "<group>"; };
+		3C8E29DE2AF66F54006F4DEB /* FilemakerOData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilemakerOData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +101,13 @@
 			isa = PBXGroup;
 			children = (
 				3C8E299D2AF65A3B006F4DEB /* ZephyrOfflineApp.swift */,
-				3C8E299F2AF65A3B006F4DEB /* ContentView.swift */,
+				3C8E29AD2AF65B65006F4DEB /* Models */,
+				3C8E29AC2AF65B5B006F4DEB /* Views */,
+				3C8E29AE2AF65B6C006F4DEB /* Components */,
+				3C8E29AF2AF65B74006F4DEB /* Extensions */,
+				3C8E29DE2AF66F54006F4DEB /* FilemakerOData.swift */,
 				3C8E29A12AF65A3B006F4DEB /* Assets.xcassets */,
+				3C8E29DC2AF66F1E006F4DEB /* nations.txt */,
 				3C8E29A32AF65A3B006F4DEB /* ZephyrOffline.entitlements */,
 				3C8E29A42AF65A3B006F4DEB /* Preview Content */,
 			);
@@ -67,6 +120,57 @@
 				3C8E29A52AF65A3B006F4DEB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3C8E29AC2AF65B5B006F4DEB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C8E29B62AF66D16006F4DEB /* StudendViewModel.swift */,
+				3C8E299F2AF65A3B006F4DEB /* ContentView.swift */,
+				3C8E29B82AF66D45006F4DEB /* StudentDetailView.swift */,
+				3C8E29BA2AF66D5D006F4DEB /* AddNewStudentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3C8E29AD2AF65B65006F4DEB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3C8E29B02AF66CB2006F4DEB /* Student.swift */,
+				3C8E29B22AF66CD3006F4DEB /* StudentData.swift */,
+				3C8E29B42AF66CEB006F4DEB /* AlertInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3C8E29AE2AF65B6C006F4DEB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3C8E29BC2AF66D7B006F4DEB /* CustomToolbarView.swift */,
+				3C8E29BE2AF66D8C006F4DEB /* MultiPickerView.swift */,
+				3C8E29C02AF66DA8006F4DEB /* StudentListItemView.swift */,
+				3C8E29C22AF66DC0006F4DEB /* StudentDetailRowView.swift */,
+				3C8E29C42AF66DD5006F4DEB /* LearnerItemView.swift */,
+				3C8E29C62AF66DE6006F4DEB /* CustomTextField.swift */,
+				3C8E29C82AF66DFE006F4DEB /* MapView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3C8E29AF2AF65B74006F4DEB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3C8E29CA2AF66E2B006F4DEB /* StudentDetailViewExt.swift */,
+				3C8E29CC2AF66E40006F4DEB /* StudentEditDetailView.swift */,
+				3C8E29CE2AF66E55006F4DEB /* AddNewStudentViewExt.swift */,
+				3C8E29D02AF66E7B006F4DEB /* MainRectangleExt.swift */,
+				3C8E29D22AF66E9B006F4DEB /* SmallerRectangleExt.swift */,
+				3C8E29D42AF66EB5006F4DEB /* TextField-NumericExt.swift */,
+				3C8E29D62AF66ED1006F4DEB /* TextField-LettersExt.swift */,
+				3C8E29D82AF66EE8006F4DEB /* BackCustomButtonExt.swift */,
+				3C8E29DA2AF66EFC006F4DEB /* CustomCancelButton.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +233,7 @@
 			files = (
 				3C8E29A62AF65A3B006F4DEB /* Preview Assets.xcassets in Resources */,
 				3C8E29A22AF65A3B006F4DEB /* Assets.xcassets in Resources */,
+				3C8E29DD2AF66F1E006F4DEB /* nations.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +244,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C8E29DB2AF66EFC006F4DEB /* CustomCancelButton.swift in Sources */,
+				3C8E29D52AF66EB5006F4DEB /* TextField-NumericExt.swift in Sources */,
+				3C8E29C72AF66DE6006F4DEB /* CustomTextField.swift in Sources */,
+				3C8E29B92AF66D45006F4DEB /* StudentDetailView.swift in Sources */,
+				3C8E29B72AF66D16006F4DEB /* StudendViewModel.swift in Sources */,
+				3C8E29BF2AF66D8C006F4DEB /* MultiPickerView.swift in Sources */,
 				3C8E29A02AF65A3B006F4DEB /* ContentView.swift in Sources */,
+				3C8E29B52AF66CEB006F4DEB /* AlertInfo.swift in Sources */,
+				3C8E29C52AF66DD5006F4DEB /* LearnerItemView.swift in Sources */,
+				3C8E29C92AF66DFE006F4DEB /* MapView.swift in Sources */,
+				3C8E29B32AF66CD3006F4DEB /* StudentData.swift in Sources */,
+				3C8E29D12AF66E7B006F4DEB /* MainRectangleExt.swift in Sources */,
+				3C8E29D72AF66ED1006F4DEB /* TextField-LettersExt.swift in Sources */,
+				3C8E29D92AF66EE8006F4DEB /* BackCustomButtonExt.swift in Sources */,
+				3C8E29D32AF66E9B006F4DEB /* SmallerRectangleExt.swift in Sources */,
+				3C8E29C32AF66DC0006F4DEB /* StudentDetailRowView.swift in Sources */,
+				3C8E29B12AF66CB2006F4DEB /* Student.swift in Sources */,
+				3C8E29CF2AF66E55006F4DEB /* AddNewStudentViewExt.swift in Sources */,
+				3C8E29CB2AF66E2B006F4DEB /* StudentDetailViewExt.swift in Sources */,
+				3C8E29BD2AF66D7B006F4DEB /* CustomToolbarView.swift in Sources */,
 				3C8E299E2AF65A3B006F4DEB /* ZephyrOfflineApp.swift in Sources */,
+				3C8E29C12AF66DA8006F4DEB /* StudentListItemView.swift in Sources */,
+				3C8E29DF2AF66F54006F4DEB /* FilemakerOData.swift in Sources */,
+				3C8E29BB2AF66D5D006F4DEB /* AddNewStudentView.swift in Sources */,
+				3C8E29CD2AF66E40006F4DEB /* StudentEditDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +412,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -322,7 +450,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
