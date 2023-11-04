@@ -35,7 +35,7 @@ struct ContentView: View {
                                 student.safeName.localizedCaseInsensitiveContains(searchText) ||
                                 student.safeSurname.localizedCaseInsensitiveContains(searchText) {
                                 NavigationLink {
-                                    StudentDetailView(student: student)
+                                    StudentDetailView(student: student, controllerVM: controllerVM)
                                 } label: {
                                     LearnerItemView(student: student)
                                         .padding(.bottom, 20)
@@ -51,7 +51,7 @@ struct ContentView: View {
                             student.safeName.localizedCaseInsensitiveContains(searchText) ||
                             student.safeSurname.localizedCaseInsensitiveContains(searchText) {
                             NavigationLink {
-                                StudentDetailView(student: student)
+                                StudentDetailView(student: student, controllerVM: controllerVM)
                             } label: {
                                 StudentListItemView(student: student)
                                     .padding(.horizontal, 20)

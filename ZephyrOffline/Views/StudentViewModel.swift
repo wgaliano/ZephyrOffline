@@ -84,11 +84,11 @@ class StudentViewModel: ObservableObject {
     }
     
     func checkAddress(province: String, city: String, address: String) -> String {
-        if province == "-" {
+        if province == "-" || province == "" {
             return "-"
-        } else if city == "-" {
+        } else if city == "-" || city == "" {
             return "\(province)"
-        } else if address == "-" {
+        } else if address == "-" || address == "" {
             return "\(province), \(city)"
         }
         return "\(province), \(city), \(address)"
@@ -102,7 +102,8 @@ class StudentViewModel: ObservableObject {
     }
     
     func handleEmptyInput(_ input: String) -> String {
-        return input.isEmpty ? "-" : removeExtraSpaces(from: input)
+        return removeExtraSpaces(from: input)
+//        return input.isEmpty ? "-" : removeExtraSpaces(from: input)
     }
     
     func handleEmptyPickerValue(_ selection: String, _ defaultArray: [String]) -> String {
@@ -110,7 +111,7 @@ class StudentViewModel: ObservableObject {
     }
     
     func studentInputHandling(_ student: StudentEntity) -> StudentEntity {
-        var studentWithNoEmptyFields = student
+        var studentWithNoEmptyFields : StudentEntity = student
         
         studentWithNoEmptyFields.names = handleEmptyInput(studentWithNoEmptyFields.safeName)
         studentWithNoEmptyFields.surname = handleEmptyInput(studentWithNoEmptyFields.safeSurname)

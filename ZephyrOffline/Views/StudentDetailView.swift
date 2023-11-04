@@ -11,8 +11,26 @@ struct StudentDetailView: View {
 
     @State var student: StudentEntity
     @StateObject var studentViewModel = StudentViewModel()
+    @ObservedObject var controllerVM: PersistenceController
     @State var alertInfo: AlertInfo?
     @State var showAlert = false
+    
+    @State var newName = ""
+    @State var newSurname = ""
+    @State var newGender = ""
+    @State var newDateOfBirth = ""
+    @State var newNationality = ""
+    @State var newCity = ""
+    @State var newAddress = ""
+    @State var newIdentityNumber = ""
+    @State var newLanguage = ""
+    @State var newGrade = ""
+    @State var newSchool = ""
+    @State var newProgramme = ""
+    @State var newReferenceContact = ""
+    @State var newProvince = "-"
+    @State var newSkills = ""
+    @State var newSpecialNeeds = ""
 
     @Environment(\.presentationMode) var presentationMode
 
@@ -100,6 +118,8 @@ struct StudentDetailView: View {
 //                        Task {
 //                            await studentViewModel.deleteStudent(studentPrimaryKey: primaryKey)
 //                        }
+                        
+                        controllerVM.deleteStudent(student: student)
                         presentationMode.wrappedValue.dismiss()
                     })
                     
@@ -155,6 +175,25 @@ struct StudentDetailView: View {
 //                            Task {
 //                                await studentViewModel.editStudent(student)
 //                            }
+                            controllerVM.updateStudent(
+                                student: student,
+                                name: studentViewModel.handleEmptyInput(newName),
+                                surname: studentViewModel.handleEmptyInput(newSurname),
+                                gender: studentViewModel.handleEmptyPickerValue(newGender, Student.genderValues),
+                                dateOfBirth: studentViewModel.handleEmptyInput(newDateOfBirth),
+                                nationality: studentViewModel.handleEmptyPickerValue(newNationality, studentViewModel.loadNations()),
+                                city: studentViewModel.handleEmptyInput(newCity),
+                                address: studentViewModel.handleEmptyInput(newAddress),
+                                language: studentViewModel.handleEmptyPickerValue(newLanguage, Student.languages),
+                                specialNeeds: studentViewModel.handleEmptyPickerValue(newSpecialNeeds, Student.specialNeedsList),
+                                identityNumber: studentViewModel.handleEmptyInput(newIdentityNumber),
+                                grade: studentViewModel.handleEmptyPickerValue(newGrade, Student.grades),
+                                school: studentViewModel.handleEmptyInput(newSchool),
+                                programme: studentViewModel.handleEmptyPickerValue(newProgramme, Student.programmes),
+                                referenceContact: studentViewModel.handleEmptyInput(newReferenceContact),
+                                province: studentViewModel.handleEmptyPickerValue(newProvince, Student.provinces),
+                                skills: studentViewModel.handleEmptyPickerValue(newSkills, Student.skillsList)
+                            )
                             isEditable.toggle()
 //                            presentationMode.wrappedValue.dismiss()
                         })

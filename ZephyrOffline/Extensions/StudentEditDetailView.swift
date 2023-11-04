@@ -8,7 +8,6 @@
 import SwiftUI
 
 extension StudentDetailView {
-
     // StudentInfo
     var editAnagraphical: some View {
 
@@ -16,60 +15,50 @@ extension StudentDetailView {
             StudentDetailEditRowTextWithoutSymbolsView(
                 symbol: "person.fill",
                 title: "Name",
-                parameter: Binding(
-                    get: { student.safeName },
-                    set: { student.safeName = $0 }
-                )
+                parameter: $newName
             )
             Divider()
             StudentDetailEditRowTextWithoutSymbolsView(
                 symbol: "person.fill",
                 title: "Surname",
-                parameter: Binding<String>(
-                    get: { student.safeSurname },
-                    set: { student.safeSurname = $0 }
-                )
+                parameter: $newSurname
             )
             Divider()
             StudentDetailEditRowPickView(
                 symbol: "person.fill",
                 title: "Gender",
                 array: Student.genderValues,
-                parameter: Binding<String>(
-                    get: { student.safeGender },
-                    set: { student.safeGender = $0 }
-                )
+                parameter: $newGender
             )
             Divider()
             StudentDetailEditRowDateView(
                 symbol: "calendar",
                 title: "Date of birth",
-                parameter: Binding<String>(
-                    get: { student.safeDateOfBirth },
-                    set: { student.safeDateOfBirth = $0 }
-                )
+                parameter: $newDateOfBirth
             )
             Divider()
             StudentDetailEditRowPickView(
                 symbol: "globe.europe.africa.fill",
                 title: "Nation of birth",
                 array: studentViewModel.loadNations(),
-                parameter: Binding<String>(
-                    get: { student.safeNationality },
-                    set: { student.safeNationality = $0 }
-                )
+                parameter: $newNationality
             )
             Divider()
             StudentDetailEditRowIntView(
                 symbol: "menucard.fill",
                 title: "Identity number",
-                parameter: Binding<String>(
-                    get: { student.safeIdentityNumber },
-                    set: { student.safeIdentityNumber = $0 }
-                )
+                parameter: $newIdentityNumber
             )
         }
         .mainRectangleExt()
+        .onAppear(perform: {
+            newName = student.safeName
+            newSurname = student.safeSurname
+            newGender = student.safeGender
+            newDateOfBirth = student.safeDateOfBirth
+            newNationality = student.safeNationality
+            newIdentityNumber = student.safeIdentityNumber
+        })
     }
 
     // SchoolStudentInfo
@@ -78,10 +67,7 @@ extension StudentDetailView {
             StudentDetailEditRowTextWithSymbolsView(
                 symbol: "mappin.and.ellipse",
                 title: "School",
-                parameter: Binding<String>(
-                    get: { student.safeSchool },
-                    set: { student.safeSchool = $0 }
-                )
+                parameter: $newSchool
             )
             Divider()
 
@@ -89,10 +75,7 @@ extension StudentDetailView {
                 symbol: "text.book.closed.fill",
                 title: "Programme",
                 array: Student.programmes,
-                parameter: Binding<String>(
-                    get: { student.safeProgramme },
-                    set: { student.safeProgramme = $0 }
-                )
+                parameter: $newProgramme
             )
             Divider()
 
@@ -100,12 +83,15 @@ extension StudentDetailView {
                 symbol: "graduationcap.fill",
                 title: "Grade",
                 array: Student.grades,
-                parameter: Binding<String>(
-                    get: { student.safeGrade },
-                    set: { student.safeGrade = $0 }
-                )
+                parameter: $newGrade
             )
-        }.mainRectangleExt()
+        }
+        .mainRectangleExt()
+        .onAppear(perform: {
+            newSchool = student.safeSchool
+            newProgramme = student.safeProgramme
+            newGrade = student.safeGrade
+        })
     }
 
     // MapView, Student address, Reference Contact
@@ -114,41 +100,35 @@ extension StudentDetailView {
             StudentDetailEditRowTextWithSymbolsView(
                 symbol: "map.fill",
                 title: "Province",
-                parameter: Binding<String>(
-                    get: { student.safeProvince },
-                    set: { student.safeProvince = $0 }
-                )
+                parameter: $newProvince
             )
             Divider()
             StudentDetailEditRowTextWithSymbolsView(
                 symbol: "map.fill",
                 title: "City",
-                parameter: Binding<String>(
-                    get: { student.safeCity },
-                    set: { student.safeCity = $0 }
-                )
+                parameter: $newCity
             )
 
             Divider()
             StudentDetailEditRowTextWithSymbolsView(
                 symbol: "map.fill",
                 title: "Address",
-                parameter: Binding<String>(
-                    get: { student.safeAddress },
-                    set: { student.safeAddress = $0 }
-                )
+                parameter: $newAddress
             )
             Divider()
             StudentDetailEditRowTextWithSymbolsView(
                 symbol: "person.circle.fill",
                 title: "Reference Contact",
-                parameter: Binding<String>(
-                    get: { student.safeReferenceContact },
-                    set: { student.safeReferenceContact = $0 }
-                )
+                parameter: $newReferenceContact
             )
         }
         .mainRectangleExt()
+        .onAppear(perform: {
+            newProvince = student.safeProvince
+            newCity = student.safeCity
+            newAddress = student.safeAddress
+            newReferenceContact = student.safeReferenceContact
+        })
     }
 
     // Languages and Skills
@@ -157,32 +137,29 @@ extension StudentDetailView {
             StudentDetailEditRowMultiPickView(
                 symbol: "text.bubble.fill",
                 title: "Languages",
-                parameter: Binding<String>(
-                    get: { student.safeLanguage },
-                    set: { student.safeLanguage = $0 }
-                ),
+                parameter: $newLanguage,
                 isShowingButton: $isShowingLanguagesPicker
             )
             Divider()
             StudentDetailEditRowMultiPickView(
                 symbol: "list.bullet",
                 title: "Skills",
-                parameter: Binding<String>(
-                    get: { student.safeSkills },
-                    set: { student.safeSkills = $0 }
-                ),
+                parameter: $newSkills,
                 isShowingButton: $isShowingSkillsPicker
             )
             Divider()
             StudentDetailEditRowMultiPickView(
                 symbol: "figure.2.arms.open",
                 title: "Special Needs",
-                parameter: Binding<String>(
-                    get: { student.safeSpecialNeeds },
-                    set: { student.safeSpecialNeeds = $0 }
-                ),
+                parameter: $newSpecialNeeds,
                 isShowingButton: $isShowingSpecialNeedsPicker
             )
-        }.mainRectangleExt()
+        }
+        .mainRectangleExt()
+        .onAppear(perform: {
+            newLanguage = student.safeLanguage
+            newSkills = student.safeSkills
+            newSpecialNeeds = student.safeSpecialNeeds
+        })
     }
 }
