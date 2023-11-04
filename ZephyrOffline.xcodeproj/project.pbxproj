@@ -14,7 +14,7 @@
 		3C8E29B12AF66CB2006F4DEB /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29B02AF66CB2006F4DEB /* Student.swift */; };
 		3C8E29B32AF66CD3006F4DEB /* StudentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29B22AF66CD3006F4DEB /* StudentData.swift */; };
 		3C8E29B52AF66CEB006F4DEB /* AlertInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29B42AF66CEB006F4DEB /* AlertInfo.swift */; };
-		3C8E29B72AF66D16006F4DEB /* StudendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29B62AF66D16006F4DEB /* StudendViewModel.swift */; };
+		3C8E29B72AF66D16006F4DEB /* StudentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29B62AF66D16006F4DEB /* StudentViewModel.swift */; };
 		3C8E29B92AF66D45006F4DEB /* StudentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29B82AF66D45006F4DEB /* StudentDetailView.swift */; };
 		3C8E29BB2AF66D5D006F4DEB /* AddNewStudentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29BA2AF66D5D006F4DEB /* AddNewStudentView.swift */; };
 		3C8E29BD2AF66D7B006F4DEB /* CustomToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29BC2AF66D7B006F4DEB /* CustomToolbarView.swift */; };
@@ -35,6 +35,8 @@
 		3C8E29DB2AF66EFC006F4DEB /* CustomCancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29DA2AF66EFC006F4DEB /* CustomCancelButton.swift */; };
 		3C8E29DD2AF66F1E006F4DEB /* nations.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3C8E29DC2AF66F1E006F4DEB /* nations.txt */; };
 		3C8E29DF2AF66F54006F4DEB /* FilemakerOData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29DE2AF66F54006F4DEB /* FilemakerOData.swift */; };
+		3C8E29E22AF66FF1006F4DEB /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29E02AF66FF1006F4DEB /* DataModel.xcdatamodeld */; };
+		3C8E29E42AF670CB006F4DEB /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E29E32AF670CB006F4DEB /* PersistenceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +49,7 @@
 		3C8E29B02AF66CB2006F4DEB /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		3C8E29B22AF66CD3006F4DEB /* StudentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentData.swift; sourceTree = "<group>"; };
 		3C8E29B42AF66CEB006F4DEB /* AlertInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertInfo.swift; sourceTree = "<group>"; };
-		3C8E29B62AF66D16006F4DEB /* StudendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudendViewModel.swift; sourceTree = "<group>"; };
+		3C8E29B62AF66D16006F4DEB /* StudentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewModel.swift; sourceTree = "<group>"; };
 		3C8E29B82AF66D45006F4DEB /* StudentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailView.swift; sourceTree = "<group>"; };
 		3C8E29BA2AF66D5D006F4DEB /* AddNewStudentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewStudentView.swift; sourceTree = "<group>"; };
 		3C8E29BC2AF66D7B006F4DEB /* CustomToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbarView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,8 @@
 		3C8E29DA2AF66EFC006F4DEB /* CustomCancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCancelButton.swift; sourceTree = "<group>"; };
 		3C8E29DC2AF66F1E006F4DEB /* nations.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nations.txt; sourceTree = "<group>"; };
 		3C8E29DE2AF66F54006F4DEB /* FilemakerOData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilemakerOData.swift; sourceTree = "<group>"; };
+		3C8E29E12AF66FF1006F4DEB /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		3C8E29E32AF670CB006F4DEB /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,10 +129,11 @@
 		3C8E29AC2AF65B5B006F4DEB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3C8E29B62AF66D16006F4DEB /* StudendViewModel.swift */,
+				3C8E29B62AF66D16006F4DEB /* StudentViewModel.swift */,
 				3C8E299F2AF65A3B006F4DEB /* ContentView.swift */,
 				3C8E29B82AF66D45006F4DEB /* StudentDetailView.swift */,
 				3C8E29BA2AF66D5D006F4DEB /* AddNewStudentView.swift */,
+				3C8E29E32AF670CB006F4DEB /* PersistenceController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 				3C8E29B02AF66CB2006F4DEB /* Student.swift */,
 				3C8E29B22AF66CD3006F4DEB /* StudentData.swift */,
 				3C8E29B42AF66CEB006F4DEB /* AlertInfo.swift */,
+				3C8E29E02AF66FF1006F4DEB /* DataModel.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,11 +254,12 @@
 				3C8E29D52AF66EB5006F4DEB /* TextField-NumericExt.swift in Sources */,
 				3C8E29C72AF66DE6006F4DEB /* CustomTextField.swift in Sources */,
 				3C8E29B92AF66D45006F4DEB /* StudentDetailView.swift in Sources */,
-				3C8E29B72AF66D16006F4DEB /* StudendViewModel.swift in Sources */,
+				3C8E29B72AF66D16006F4DEB /* StudentViewModel.swift in Sources */,
 				3C8E29BF2AF66D8C006F4DEB /* MultiPickerView.swift in Sources */,
 				3C8E29A02AF65A3B006F4DEB /* ContentView.swift in Sources */,
 				3C8E29B52AF66CEB006F4DEB /* AlertInfo.swift in Sources */,
 				3C8E29C52AF66DD5006F4DEB /* LearnerItemView.swift in Sources */,
+				3C8E29E42AF670CB006F4DEB /* PersistenceController.swift in Sources */,
 				3C8E29C92AF66DFE006F4DEB /* MapView.swift in Sources */,
 				3C8E29B32AF66CD3006F4DEB /* StudentData.swift in Sources */,
 				3C8E29D12AF66E7B006F4DEB /* MainRectangleExt.swift in Sources */,
@@ -267,6 +274,7 @@
 				3C8E299E2AF65A3B006F4DEB /* ZephyrOfflineApp.swift in Sources */,
 				3C8E29C12AF66DA8006F4DEB /* StudentListItemView.swift in Sources */,
 				3C8E29DF2AF66F54006F4DEB /* FilemakerOData.swift in Sources */,
+				3C8E29E22AF66FF1006F4DEB /* DataModel.xcdatamodeld in Sources */,
 				3C8E29BB2AF66D5D006F4DEB /* AddNewStudentView.swift in Sources */,
 				3C8E29CD2AF66E40006F4DEB /* StudentEditDetailView.swift in Sources */,
 			);
@@ -487,6 +495,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3C8E29E02AF66FF1006F4DEB /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3C8E29E12AF66FF1006F4DEB /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 3C8E29E12AF66FF1006F4DEB /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3C8E29922AF65A3B006F4DEB /* Project object */;
 }
