@@ -10,6 +10,16 @@ import SwiftUI
 class StudentViewModel: ObservableObject {
     @Published var students: [Student] = []
     
+    @Published var isTheFirstTime = true {
+        didSet {
+            UserDefaults.standard.setValue(isTheFirstTime, forKey: "isTheFirstTime")
+        }
+    }
+    
+    init() {
+        self.isTheFirstTime = UserDefaults.standard.bool(forKey: "isTheFirstTime")
+    }
+    
     private let studentData = StudentData()
     
     @MainActor
