@@ -13,6 +13,7 @@ struct ZephyrOfflineApp: App {
         WindowGroup {
             NavigationStack {
                 ContentView()
+                    .preferredColorScheme(.light)
             }
         }
     }
